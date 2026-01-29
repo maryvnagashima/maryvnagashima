@@ -164,13 +164,10 @@ Trabalho criando **agentes, automações e data apps** que usam IA e dados para 
 
 ## 📊 GitHub Stats
 
+<!-- GitHub Stats -->
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=maryvnagashima&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="49%"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=maryvnagashima&theme=tokyonight&hide_border=true" width="49%"/>
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=maryvnagashima&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" width="49%"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=maryvnagashima&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="49%" alt="GitHub Stats"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=maryvnagashima&theme=tokyonight&hide_border=true" width="49%" alt="Streak Stats"/>
 </div>
 
 ---
