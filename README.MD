@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="https://github.com/maryvnagashima.png" width="150" style="border-radius:50%"/>
+ <img src="https://avatars.githubusercontent.com/u/84460036?v=4" width="120" style="border-radius:50%; object-fit: cover; border: 3px solid #6366F1; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);" />
   
-  <h1>Marina Nagashima</h1>
+  <h1>Marina Vieira Nagashima</h1>
   
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=AI%2FML+Engineer+%7C+Marketing+%E2%86%92+Tech;Building+AI+Agents+%26+Data+Pipelines;2+Years+Shipping+LLMs+to+Production" alt="Typing SVG" />
   
