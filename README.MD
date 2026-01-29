@@ -1,3 +1,6 @@
+Claro! Aqui está o **README.md completo**, com a seção "Sobre Mim" reformulada (sem código Python literal), mantendo todo o impacto visual, profissionalismo e foco em recrutadores técnicos — especialmente para empresas como Accenture:
+
+```markdown
 <div align="center">
   <img src="https://github.com/maryvnagashima.png" width="150" style="border-radius:50%"/>
   
@@ -36,31 +39,28 @@
 
 ## 👋 Sobre Mim
 
-**AI/ML Engineer** em transição estruturada de **Marketing Digital → Engenharia de IA**, com **2 anos** entregando soluções de IA Generativa em produção que geram impacto mensurável de negócio.
-```python
-class MarinaNagashima:
-    def __init__(self):
-        self.role = "AI/ML Engineer"
-        self.background = "10+ anos Performance Marketing → Data & AI"
-        self.education = ["MBA Big Data Analytics", "Data Engineer AI (DataCamp)"]
-        self.certifications = ["AWS Cloud Practitioner", "Databricks GenAI", "GA4"]
-        
-    def skills(self):
-        return {
-            "ai_ml": ["LLMs (Groq, Gemini, Cortex)", "Prompt Engineering", "RAG"],
-            "data": ["BigQuery", "Snowflake", "Databricks", "SQL", "ETL Pipelines"],
-            "cloud": ["GCP (2 anos)", "AWS (1 ano)", "Azure Databricks (1 ano)"],
-            "dev": ["Python", "TypeScript", "React", "n8n", "Git/GitHub"],
-            "focus": ["MLOps", "Agent Orchestration", "Data Apps", "LGPD Compliance"]
-        }
-    
-    def current_projects(self):
-        return [
-            "🤖 Lead Qualification AI (48% conversion, 50k+ interactions/month)",
-            "📊 BudgetMind SaaS (R$500k+ managed, 3.2x ROAS)",
-            "💬 Snowflake Cortex Chatbot (SQL-free natural language queries)"
-        ]
-```
+Sou uma **AI/ML Engineer** em transição estruturada de **Marketing Digital → Engenharia de IA**, com **2 anos entregando soluções de IA Generativa em produção** que geram impacto mensurável de negócio.
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Background-10%2B%20anos%20em%20Performance%20Marketing-blue?style=flat&logo=datacamp" />
+  <img src="https://img.shields.io/badge/Education-MBA%20Big%20Data%20%7C%20DataCamp%20AI%20Engineer-purple?style=flat&logo=googlecloud" />
+  <img src="https://img.shields.io/badge/Certifications-AWS%20%7C%20Databricks%20GenAI%20%7C%20GA4-orange?style=flat&logo=amazon" />
+</div>
+
+### 🔧 Minhas Competências Técnicas
+
+| Área | Tecnologias |
+|------|-------------|
+| **IA & LLMs** | Groq (Llama 3), Gemini, Snowflake Cortex, RAG, Prompt Engineering |
+| **Engenharia de Dados** | BigQuery, Snowflake, Databricks, SQL avançado, ETL/ELT pipelines |
+| **Cloud** | Google Cloud Platform (2+ anos), AWS (1+ ano), Azure Databricks |
+| **Desenvolvimento** | Python, TypeScript, React, n8n, Git/GitHub, Serverless |
+| **Foco Estratégico** | MLOps, Orquestração de Agentes, Data Apps, Conformidade LGPD |
+
+### 🚀 Projetos em Produção
+- **🤖 Lead Qualification AI**: 48% de conversão, 50k+ interações/mês  
+- **📊 BudgetMind SaaS**: R$500k+/mês gerenciado, ROAS médio de 3.2x  
+- **💬 Snowflake Cortex Chatbot**: Acesso a dados sem SQL para times não técnicos
 
 ---
 
@@ -85,6 +85,7 @@ class MarinaNagashima:
 
 <details>
 <summary>📐 Ver Arquitetura</summary>
+
 ```mermaid
 graph LR
     A[Mídia Paga] --> B[Landing Page]
@@ -218,6 +219,7 @@ graph LR
 ---
 
 ## 🎯 O Que Me Diferencia
+
 ```diff
 + 2 anos entregando IA em PRODUÇÃO (não só POCs)
 + Visão de negócio (10+ anos): traduzo requisitos em soluções técnicas viáveis
@@ -239,7 +241,7 @@ graph LR
   
   <br/>
   
-  <a href="https://linkedin.com/in/marinanagashina">
+  <a href="https://linkedin.com/in/marinanagashima">
     <img src="https://img.shields.io/badge/Conectar_no_LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
   <a href="mailto:marina_vborges@hotmail.com">
@@ -258,3 +260,4 @@ graph LR
   <br/><br/>
   <sub>💜 Feito com IA Generativa • Atualizado Janeiro 2026</sub>
 </div>
+```
