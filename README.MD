@@ -1,4 +1,12 @@
-
+```markdown
+<div align="center">
+  <img src="https://github.com/maryvnagashima.png  " width="150" style="border-radius:50%"/>
+  
+  <h1>Marina Nagashima</h1>
+  
+  <img src="https://readme-typing-svg.demolab.com  ?font=Fira+Code&size=22&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=AI%2FML+Engineer+%7C+Marketing+%E2%86%92+Tech;Building+AI+Agents+%26+Data+Pipelines;2+Years+Shipping+LLMs+to+Production" alt="Typing SVG" />
+  
+  <p><b>Transformando processos manuais em sistemas inteligentes com IA Generativa, automação e engenharia de dados</b></p>
 
 ## 👋 Sobre Mim
 
