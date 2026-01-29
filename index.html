@@ -1,1306 +1,1826 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marina Nagashima | AI Engineer & Strategic Generalist</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --indigo-50: #EEF2FF;
-            --indigo-100: #E0E7FF;
-            --indigo-200: #C7D2FE;
-            --indigo-300: #A5B4FC;
-            --indigo-400: #818CF8;
-            --indigo-500: #6366F1;
-            --indigo-600: #4F46E5;
-            --indigo-700: #4338CA;
-            --indigo-800: #3730A3;
-            --indigo-900: #312E81;
-            
-            --purple-500: #8B5CF6;
-            --blue-500: #3B82F6;
-            --cyan-500: #06B6D4;
-            --teal-500: #14B8A6;
-            --emerald-500: #10B981;
-            --orange-500: #F97316;
-            --red-500: #EF4444;
-            --gray-50: #F9FAFB;
-            --gray-100: #F3F4F6;
-            --gray-200: #E5E7EB;
-            --gray-300: #D1D5DB;
-            --gray-700: #374151;
-            --gray-900: #111827;
-            
-            --gradient-primary: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
-            --gradient-secondary: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%);
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
-            color: #1F2937;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Header Section */
-        .header {
-            background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
-            color: white;
-            padding: 4rem 0 6rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 50%);
-            z-index: 0;
-        }
-
-        .header-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .typing-text {
-            font-family: 'Fira Code', monospace;
-            font-size: 1.2rem;
-            color: #E0E7FF;
-            margin-bottom: 2rem;
-            min-height: 2.5rem;
-        }
-
-        .name {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin: 1rem 0;
-            background: linear-gradient(135deg, #FFFFFF 0%, #E0E7FF 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .subtitle {
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: #E0E7FF;
-            margin-bottom: 2rem;
-        }
-
-        .tagline {
-            font-size: 1.1rem;
-            color: #C7D2FE;
-            margin-bottom: 3rem;
-        }
-
-        /* Badges */
-        .badges-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .badge {
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 0.5rem 1.25rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .badge:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Contact Links */
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .contact-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.875rem 1.75rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .contact-btn.linkedin {
-            background: #0A66C2;
-            color: white;
-        }
-
-        .contact-btn.github {
-            background: #181717;
-            color: white;
-        }
-
-        .contact-btn.email {
-            background: #D19A66;
-            color: white;
-        }
-
-        .contact-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Stats Section */
-        .stats-section {
-            background: white;
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .stat-card {
-            background: var(--gray-50);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid var(--gray-200);
-            transition: all 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1rem;
-            color: var(--gray-700);
-            font-weight: 500;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--indigo-700) 0%, var(--indigo-900) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.1rem;
-            color: var(--gray-700);
-            max-width: 700px;
-            margin: 0 auto 3rem;
-        }
-
-        /* Approach Section */
-        .approach-section {
-            background: white;
-        }
-
-        .approach-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .quote-box {
-            background: var(--indigo-50);
-            border-left: 4px solid var(--indigo-500);
-            padding: 2rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-            font-style: italic;
-            font-weight: 500;
-            color: var(--indigo-800);
-        }
-
-        .focus-badges {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        /* Projects Section */
-        .projects-section {
-            background: var(--gray-50);
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            border: 1px solid var(--gray-200);
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2);
-        }
-
-        .project-header {
-            background: linear-gradient(135deg, var(--indigo-500) 0%, var(--indigo-600) 100%);
-            color: white;
-            padding: 1.5rem;
-        }
-
-        .project-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-description {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-
-        .project-body {
-            padding: 1.5rem;
-        }
-
-        .project-section {
-            margin-bottom: 1.5rem;
-        }
-
-        .project-section-title {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--indigo-700);
-            margin-bottom: 0.75rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .tech-badge {
-            background: var(--indigo-50);
-            color: var(--indigo-700);
-            padding: 0.375rem 0.875rem;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .impact-box {
-            background: var(--indigo-50);
-            border: 1px solid var(--indigo-200);
-            border-radius: 8px;
-            padding: 1.25rem;
-            margin-top: 1rem;
-        }
-
-        .impact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--gray-800);
-        }
-
-        /* Certifications Section */
-        .certifications-section {
-            background: white;
-        }
-
-        .cert-category {
-            margin-bottom: 3rem;
-        }
-
-        .cert-category-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--indigo-700);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .cert-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .cert-badge {
-            background: linear-gradient(135deg, var(--indigo-500) 0%, var(--indigo-600) 100%);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            transition: all 0.3s ease;
-        }
-
-        .cert-badge:hover {
-            transform: scale(1.05);
-        }
-
-        .cert-badge.databricks { background: linear-gradient(135deg, #FF6B35 0%, #FF8C69 100%); }
-        .cert-badge.datacamp { background: linear-gradient(135deg, #20B26C 0%, #28D484 100%); }
-        .cert-badge.google { background: linear-gradient(135deg, #4285F4 0%, #5B9CFC 100%); }
-        .cert-badge.amazon { background: linear-gradient(135deg, #FF9900 0%, #FFB347 100%); }
-        .cert-badge.coursera { background: linear-gradient(135deg, #5E2B91 0%, #7A4FC9 100%); }
-        .cert-badge.udemy { background: linear-gradient(135deg, #FF6B6B 0%, #FF8888 100%); }
-        .cert-badge.ibm { background: linear-gradient(135deg, #0033A0 0%, #0055D4 100%); }
-
-        /* Stack Section */
-        .stack-section {
-            background: var(--gray-50);
-        }
-
-        .stack-category {
-            margin-bottom: 3rem;
-        }
-
-        .stack-category-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--indigo-700);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .stack-badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .stack-badge {
-            background: white;
-            border: 2px solid var(--gray-200);
-            padding: 0.75rem 1.5rem;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        .stack-badge:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            border-color: var(--indigo-300);
-        }
-
-        .stack-badge.python { color: #3776AB; border-color: #3776AB; }
-        .stack-badge.typescript { color: #3178C6; border-color: #3178C6; }
-        .stack-badge.javascript { color: #F7DF1E; border-color: #F7DF1E; background: #2D2D2D; }
-        .stack-badge.sql { color: #4479A1; border-color: #4479A1; }
-        .stack-badge.react { color: #61DAFB; border-color: #61DAFB; background: #282C34; }
-        .stack-badge.groq { color: white; border-color: #000; background: #000; }
-        .stack-badge.gemini { color: white; border-color: #4285F4; background: #4285F4; }
-        .stack-badge.snowflake { color: white; border-color: #29B5E8; background: #29B5E8; }
-        .stack-badge.n8n { color: white; border-color: #222; background: #222; }
-        .stack-badge.bigquery { color: white; border-color: #4285F4; background: #4285F4; }
-        .stack-badge.ga4 { color: white; border-color: #EA4335; background: #EA4335; }
-
-        /* Education Section */
-        .education-section {
-            background: white;
-        }
-
-        .education-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .education-card {
-            background: var(--gray-50);
-            padding: 2rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--indigo-500);
-            transition: all 0.3s ease;
-        }
-
-        .education-card:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
-        }
-
-        .education-institution {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--gray-900);
-            margin-bottom: 0.5rem;
-        }
-
-        .education-degree {
-            font-weight: 600;
-            color: var(--gray-700);
-            margin-bottom: 0.5rem;
-        }
-
-        .education-period {
-            color: var(--indigo-600);
-            font-weight: 600;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: linear-gradient(135deg, var(--indigo-50) 0%, white 100%);
-            padding: 6rem 0;
-        }
-
-        .contact-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 3rem;
-        }
-
-        .contact-info h3 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--indigo-700);
-        }
-
-        .contact-text {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .contact-links-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .contact-link-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-
-        .contact-icon {
-            font-size: 1.5rem;
-            color: var(--indigo-600);
-            min-width: 2rem;
-        }
-
-        .contact-link-title {
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-        }
-
-        .contact-link-url {
-            color: var(--indigo-600);
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .contact-link-url:hover {
-            text-decoration: underline;
-        }
-
-        .schedule-box {
-            background: var(--indigo-50);
-            border: 1px solid var(--indigo-200);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .schedule-box h4 {
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            color: var(--indigo-800);
-        }
-
-        .contact-form h3 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--indigo-700);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: var(--gray-700);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.875rem;
-            border: 2px solid var(--gray-300);
-            border-radius: 8px;
-            font-family: 'Inter', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--indigo-500);
-            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 1rem;
-            background: var(--gradient-primary);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--gray-900);
-            color: white;
-            padding: 4rem 0 2rem;
-            text-align: center;
-        }
-
-        .footer-social {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-social a {
-            color: #9CA3AF;
-            font-size: 2rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-
-        .footer-social a:hover {
-            color: white;
-            transform: translateY(-3px);
-        }
-
-        .footer-text {
-            color: #9CA3AF;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-subtext {
-            color: #6B7280;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .name {
-                font-size: 2.5rem;
-            }
-            
-            .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .projects-grid,
-            .education-grid,
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-            
-            section {
-                padding: 3rem 0;
-            }
-            
-            .header {
-                padding: 3rem 0 4rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marina Nagashima | AI Engineer & Strategic Generalist</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --indigo-50: #EEF2FF;
+  --indigo-100: #E0E7FF;
+  --indigo-200: #C7D2FE;
+  --indigo-300: #A5B4FC;
+  --indigo-400: #818CF8;
+  --indigo-500: #6366F1;
+  --indigo-600: #4F46E5;
+  --indigo-700: #4338CA;
+  --indigo-800: #3730A3;
+  --indigo-900: #312E81;
+  --purple-500: #8B5CF6;
+  --blue-500: #3B82F6;
+  --cyan-500: #06B6D4;
+  --teal-500: #14B8A6;
+  --emerald-500: #10B981;
+  --orange-500: #F97316;
+  --red-500: #EF4444;
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --gradient-primary: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+  --gradient-secondary: linear-gradient(135deg, #0EA5E9 0%, #06B6D4 100%);
+  --gradient-success: linear-gradient(135deg, #10B981 0%, #0EA5E9 100%);
+  --gradient-warning: linear-gradient(135deg, #F59E0B 0%, #F97316 100%);
+  --gradient-danger: linear-gradient(135deg, #EF4444 0%, #F97316 100%);
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.15);
+  --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+  color: #1F2937;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 25%),
+    radial-gradient(circle at 90% 80%, rgba(139, 92, 246, 0.05) 0%, transparent 25%);
+  z-index: -1;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+/* Header Section */
+.header {
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  color: white;
+  padding: 5rem 0 7rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+.header::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.1) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 70%);
+  z-index: 0;
+  animation: rotate 25s linear infinite;
+}
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.header-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.typing-text {
+  font-family: 'Fira Code', monospace;
+  font-size: 1.25rem;
+  color: #E0E7FF;
+  margin-bottom: 2rem;
+  min-height: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4s steps(40, end) 1s infinite alternate;
+}
+@keyframes typing {
+  0% { width: 0; }
+  5%, 10% { width: 10ch; }
+  15%, 20% { width: 25ch; }
+  25%, 30% { width: 45ch; }
+  35%, 40% { width: 60ch; }
+  45%, 50% { width: 75ch; }
+  55%, 60% { width: 90ch; }
+  65%, 70% { width: 100%; }
+  100% { width: 100%; }
+}
+.name {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 1rem 0;
+  background: linear-gradient(135deg, #FFFFFF 0%, #E0E7FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  position: relative;
+  animation: fadeInUp 1s ease-out;
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.subtitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #E0E7FF;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 1s ease-out 0.2s both;
+}
+.tagline {
+  font-size: 1.2rem;
+  color: #C7D2FE;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 1s ease-out 0.4s both;
+}
+/* Badges */
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+.badge {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.65rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+.badge:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+.badge i {
+  font-size: 1.1em;
+}
+/* Contact Links */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  animation: fadeInUp 1s ease-out 0.8s both;
+}
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-size: 1.05rem;
+  position: relative;
+  overflow: hidden;
+}
+.contact-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+.contact-btn:hover::after {
+  transform: translateX(100%);
+}
+.contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+.contact-btn.linkedin { background: #0A66C2; color: white; }
+.contact-btn.github { background: #181717; color: white; }
+.contact-btn.email { background: #D19A66; color: white; }
+/* Stats Section */
+.stats-section {
+  background: white;
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.stat-card {
+  background: var(--gray-50);
+  padding: 2.25rem;
+  border-radius: 20px;
+  border: 1px solid var(--gray-200);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient-primary);
+}
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.stat-label {
+  font-size: 1.15rem;
+  color: var(--gray-700);
+  font-weight: 600;
+}
+/* Section Styling */
+section {
+  padding: 6rem 0;
+  position: relative;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, var(--indigo-700) 0%, var(--indigo-900) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+.section-subtitle {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--gray-700);
+  max-width: 750px;
+  margin: 2rem auto 4rem;
+  line-height: 1.7;
+}
+/* Approach Section */
+.approach-section {
+  background: white;
+}
+.approach-content {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+.quote-box {
+  background: var(--indigo-50);
+  border-left: 5px solid var(--indigo-500);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin: 2.5rem 0;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--indigo-800);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+.quote-box::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  font-size: 8rem;
+  color: rgba(99, 102, 241, 0.15);
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+.focus-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+/* Projects Section */
+.projects-section {
+  background: var(--gray-50);
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.project-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  border: 1px solid var(--gray-200);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.project-card:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-lg);
+}
+.project-header {
+  background: linear-gradient(135deg, var(--indigo-500) 0%, var(--indigo-600) 100%);
+  color: white;
+  padding: 1.75rem;
+  position: relative;
+}
+.project-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--gradient-secondary);
+}
+.project-header:nth-child(2) { background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); }
+.project-header:nth-child(3) { background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%); }
+.project-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.project-description {
+  font-size: 1.05rem;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+.project-body {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.project-section {
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+.project-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--indigo-700);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--indigo-100);
+}
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+.tech-badge {
+  background: var(--indigo-50);
+  color: var(--indigo-700);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition);
+  border: 1px solid var(--indigo-100);
+}
+.tech-badge:hover {
+  background: var(--indigo-100);
+  transform: translateY(-2px);
+}
+.impact-box {
+  background: var(--indigo-50);
+  border: 1px solid var(--indigo-200);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 1.25rem;
+  flex-grow: 1;
+}
+.impact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-800);
+  font-size: 1.05rem;
+}
+.impact-item i {
+  font-size: 1.25rem;
+}
+.diagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  width: fit-content;
+  align-self: center;
+}
+.diagram-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+}
+.diagram-link i {
+  font-size: 1.1rem;
+}
+/* Certifications Section */
+.certifications-section {
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+.certifications-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.08);
+  z-index: 0;
+}
+.certifications-section::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  left: -50px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.08);
+  z-index: 0;
+}
+.cert-category {
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+.cert-category-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--indigo-700);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+.cert-category-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 3px;
+}
+.cert-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
+}
+.cert-badge {
+  background: white;
+  color: white;
+  padding: 1.1rem 1.75rem;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+  min-width: 280px;
+  border: 2px solid transparent;
+  text-align: center;
+  justify-content: center;
+}
+.cert-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+.cert-badge:hover::before {
+  transform: translateX(100%);
+}
+.cert-badge:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+.cert-badge i {
+  font-size: 1.4rem;
+  min-width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cert-badge.databricks { 
+  background: linear-gradient(135deg, #FF6B35 0%, #FF8C69 100%); 
+  color: white;
+}
+.cert-badge.datacamp { 
+  background: linear-gradient(135deg, #20B26C 0%, #28D484 100%); 
+  color: white;
+}
+.cert-badge.google { 
+  background: linear-gradient(135deg, #4285F4 0%, #5B9CFC 100%); 
+  color: white;
+}
+.cert-badge.amazon { 
+  background: linear-gradient(135deg, #FF9900 0%, #FFB347 100%); 
+  color: white;
+}
+.cert-badge.coursera { 
+  background: linear-gradient(135deg, #5E2B91 0%, #7A4FC9 100%); 
+  color: white;
+}
+.cert-badge.udemy { 
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8888 100%); 
+  color: white;
+}
+.cert-badge.ibm { 
+  background: linear-gradient(135deg, #0033A0 0%, #0055D4 100%); 
+  color: white;
+}
+.cert-badge.salesforce { 
+  background: linear-gradient(135deg, #00A1E0 0%, #1E90FF 100%); 
+  color: white;
+}
+.cert-badge.atlassian { 
+  background: linear-gradient(135deg, #0052CC 0%, #4A90E2 100%); 
+  color: white;
+}
+.cert-badge.microsoft { 
+  background: linear-gradient(135deg, #F25022 0%, #7FBA00 100%); 
+  color: white;
+}
+.cert-badge.meta { 
+  background: linear-gradient(135deg, #1877F2 0%, #4A94FF 100%); 
+  color: white;
+}
+/* Stack Section */
+.stack-section {
+  background: var(--gray-50);
+}
+.stack-category {
+  margin-bottom: 4rem;
+}
+.stack-category-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--indigo-700);
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.stack-category-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 3px;
+}
+.stack-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  align-items: center;
+}
+.stack-badge {
+  background: white;
+  border: 2px solid var(--gray-200);
+  padding: 0.95rem 1.75rem;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  min-width: 180px;
+  justify-content: center;
+}
+.stack-badge:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--indigo-300);
+}
+.stack-badge.python { color: #3776AB; border-color: #3776AB; }
+.stack-badge.typescript { color: #3178C6; border-color: #3178C6; }
+.stack-badge.javascript { color: #F7DF1E; border-color: #F7DF1E; background: #2D2D2D; }
+.stack-badge.sql { color: #4479A1; border-color: #4479A1; }
+.stack-badge.react { color: #61DAFB; border-color: #61DAFB; background: #282C34; }
+.stack-badge.groq { color: white; border-color: #000; background: #000; }
+.stack-badge.gemini { color: white; border-color: #4285F4; background: #4285F4; }
+.stack-badge.snowflake { color: white; border-color: #29B5E8; background: #29B5E8; }
+.stack-badge.n8n { color: white; border-color: #222; background: #222; }
+.stack-badge.bigquery { color: white; border-color: #4285F4; background: #4285F4; }
+.stack-badge.ga4 { color: white; border-color: #EA4335; background: #EA4335; }
+.stack-badge.looker { color: white; border-color: #4285F4; background: #4285F4; }
+/* Education Section */
+.education-section {
+  background: white;
+}
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.education-card {
+  background: var(--gray-50);
+  padding: 2.25rem;
+  border-radius: 16px;
+  border-left: 5px solid var(--indigo-500);
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+}
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, transparent 100%);
+  z-index: -1;
+}
+.education-card:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-md);
+  border-left-width: 8px;
+}
+.education-institution {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.education-degree {
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+.education-period {
+  color: var(--indigo-600);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: var(--indigo-50);
+  border-radius: 20px;
+  margin-top: 0.5rem;
+}
+/* Contact Section */
+.contact-section {
+  background: linear-gradient(135deg, var(--indigo-50) 0%, white 100%);
+  padding: 7rem 0;
+  position: relative;
+}
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.07);
+  z-index: 0;
+}
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+.contact-info h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+  color: var(--indigo-700);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.contact-text {
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  color: var(--gray-800);
+}
+.contact-links-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.contact-link-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid var(--gray-200);
+}
+.contact-link-item:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--indigo-200);
+}
+.contact-icon {
+  font-size: 1.75rem;
+  color: var(--indigo-600);
+  min-width: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-link-title {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  font-size: 1.15rem;
+  color: var(--gray-900);
+}
+.contact-link-url {
+  color: var(--indigo-600);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  font-size: 1.05rem;
+  display: block;
+}
+.contact-link-url:hover {
+  color: var(--indigo-800);
+  text-decoration: underline;
+}
+.schedule-box {
+  background: var(--indigo-50);
+  border: 1px solid var(--indigo-200);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+.schedule-box h4 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--indigo-800);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.contact-form h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+  color: var(--indigo-700);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.form-group {
+  margin-bottom: 1.75rem;
+}
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--gray-700);
+  font-size: 1.05rem;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1.1rem;
+  border: 2px solid var(--gray-300);
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  transition: var(--transition);
+  background: white;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--indigo-500);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.submit-btn {
+  width: 100%;
+  padding: 1.25rem;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 0.5px;
+}
+.submit-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+.submit-btn:hover::after {
+  transform: translateX(100%);
+}
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.5);
+}
+.submit-btn:active {
+  transform: translateY(1px);
+}
+/* Footer */
+.footer {
+  background: var(--gray-900);
+  color: white;
+  padding: 5rem 0 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  z-index: 0;
+}
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+.footer-social a {
+  color: #9CA3AF;
+  font-size: 2.25rem;
+  transition: var(--transition);
+  text-decoration: none;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+.footer-social a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+.footer-social a:hover::before {
+  transform: translateX(100%);
+}
+.footer-social a:hover {
+  color: white;
+  transform: translateY(-5px) scale(1.1);
+  background: var(--indigo-700);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+.footer-text {
+  color: #E5E7EB;
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+  position: relative;
+  z-index: 1;
+}
+.footer-subtext {
+  color: #9CA3AF;
+  font-size: 1.05rem;
+  position: relative;
+  z-index: 1;
+}
+/* Responsive */
+@media (max-width: 992px) {
+  .name {
+    font-size: 3.25rem;
+  }
+  .subtitle {
+    font-size: 1.4rem;
+  }
+  .section-title {
+    font-size: 2.35rem;
+  }
+  .cert-badge {
+    min-width: 250px;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .name {
+    font-size: 2.75rem;
+  }
+  .subtitle {
+    font-size: 1.25rem;
+  }
+  .tagline {
+    font-size: 1.1rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  .projects-grid,
+  .education-grid,
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  section {
+    padding: 4rem 0;
+  }
+  .header {
+    padding: 4rem 0 5rem;
+  }
+  .project-card {
+    max-width: 100%;
+  }
+  .cert-badge {
+    min-width: 100%;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 1.25rem 1.75rem;
+  }
+  .stack-badge {
+    min-width: 150px;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  .contact-btn {
+    padding: 0.85rem 1.75rem;
+    font-size: 0.95rem;
+  }
+  .submit-btn {
+    padding: 1.1rem;
+    font-size: 1.05rem;
+  }
+}
+@media (max-width: 480px) {
+  .name {
+    font-size: 2.4rem;
+  }
+  .subtitle {
+    font-size: 1.15rem;
+  }
+  .badges-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .badge {
+    width: 100%;
+    justify-content: center;
+  }
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .stat-number {
+    font-size: 2.5rem;
+  }
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .cert-category-title {
+    font-size: 1.6rem;
+  }
+  .stack-category-title {
+    font-size: 1.6rem;
+  }
+  .education-card {
+    padding: 1.75rem;
+  }
+  .diagram-link {
+    width: 100%;
+    justify-content: center;
+  }
+}
+</style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="typing-text">
-                    <span>AI Engineer | Data & Automation | Strategic Generalist</span>
-                </div>
-                <h1 class="name">Marina Nagashima</h1>
-                <p class="subtitle">Criando agentes, automações e data apps com IA para resolver problemas reais de negócio</p>
-                <p class="tagline">Transformando processos manuais em sistemas inteligentes, automatizados e sustentáveis</p>
-                
-                <div class="badges-container">
-                    <span class="badge">
-                        <i class="fas fa-brain"></i> LLMs: Groq | Gemini | Cortex
-                    </span>
-                    <span class="badge">
-                        <i class="fas fa-robot"></i> Orquestração: n8n | Make | Zapier
-                    </span>
-                    <span class="badge">
-                        <i class="fas fa-database"></i> Dados: BigQuery | Snowflake | GA4
-                    </span>
-                    <span class="badge">
-                        <i class="fas fa-code"></i> Engenharia: React | TS | Python
-                    </span>
-                </div>
-                
-                <div class="contact-links">
-                    <a href="https://linkedin.com/in/marinanagashina" target="_blank" class="contact-btn linkedin">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/maryvnagashima" target="_blank" class="contact-btn github">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="mailto:contato@marinanagashima.com" class="contact-btn email">
-                        <i class="fas fa-envelope"></i> Email
-                    </a>
-                </div>
-            </div>
+<!-- Header Section -->
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="typing-text">
+        <span>AI Engineer | Data & Automation | Strategic Generalist</span>
+      </div>
+      <h1 class="name">Marina Nagashima</h1>
+      <p class="subtitle">Criando agentes, automações e data apps com IA para resolver problemas reais de negócio</p>
+      <p class="tagline">Transformando processos manuais em sistemas inteligentes, automatizados e sustentáveis</p>
+      <div class="badges-container">
+        <span class="badge">
+          <i class="fas fa-brain"></i> LLMs: Groq | Gemini | Cortex
+        </span>
+        <span class="badge">
+          <i class="fas fa-robot"></i> Orquestração: n8n | Make | Zapier
+        </span>
+        <span class="badge">
+          <i class="fas fa-database"></i> Dados: BigQuery | Snowflake | GA4
+        </span>
+        <span class="badge">
+          <i class="fas fa-code"></i> Engenharia: React | TS | Python
+        </span>
+      </div>
+      <div class="contact-links">
+        <a href="https://linkedin.com/in/marinanagashima" target="_blank" class="contact-btn linkedin">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/maryvnagashima" target="_blank" class="contact-btn github">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="mailto:contato@marinanagashima.com" class="contact-btn email">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">🚀 5+</div>
+        <div class="stat-label">Projetos em Destaque</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">🎓 20+</div>
+        <div class="stat-label">Certificações</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">💡 4+</div>
+        <div class="stat-label">Áreas de Especialização</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Approach Section -->
+<section class="approach-section">
+  <div class="container">
+    <h2 class="section-title">🧠 Minha Abordagem</h2>
+    <p class="section-subtitle">Combino LLMs, pipelines de dados e governança de produto para entregar sistemas robustos, seguros e mensuráveis</p>
+    <div class="approach-content">
+      <div class="quote-box">
+        <i class="fas fa-quote-left" style="margin-right: 0.5rem;"></i>
+        Acredito que a integração entre inteligência artificial, engenharia de dados e práticas de produto é a chave para criar soluções escaláveis e de alto impacto no mundo do marketing e negócios.
+      </div>
+      <div class="focus-badges">
+        <span class="badge" style="background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%); color: white;">
+          <i class="fas fa-robot"></i> Agente Autônomo
+        </span>
+        <span class="badge" style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); color: white;">
+          <i class="fas fa-bolt"></i> Automação Inteligente
+        </span>
+        <span class="badge" style="background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%); color: white;">
+          <i class="fas fa-chart-line"></i> Data Apps
+        </span>
+        <span class="badge" style="background: linear-gradient(135deg, #10B981 0%, #0EA5E9 100%); color: white;">
+          <i class="fas fa-shield-alt"></i> Governança de Dados
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects-section">
+  <div class="container">
+    <h2 class="section-title">🚀 Projetos em Destaque</h2>
+    <p class="section-subtitle">Soluções reais com impacto mensurável em negócios</p>
+    <div class="projects-grid">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">
+            <i class="fas fa-robot"></i> Sistema de Qualificação de Leads com IA
+          </h3>
+          <p class="project-description">Chatbot WhatsApp que captura, qualifica e distribui leads em tempo real</p>
         </div>
-    </header>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">🚀 4+</div>
-                    <div class="stat-label">Projetos em Destaque</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">🎓 15+</div>
-                    <div class="stat-label">Certificações</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">💡 3+</div>
-                    <div class="stat-label">Áreas de Especialização</div>
-                </div>
+        <div class="project-body">
+          <div class="project-section">
+            <h4 class="project-section-title">
+              <i class="fas fa-cogs"></i> Funcionalidades
+            </h4>
+            <ul style="list-style: none; padding-left: 0;">
+              <li style="margin-bottom: 0.75rem;">✅ Pede consentimento LGPD automático</li>
+              <li style="margin-bottom: 0.75rem;">✅ Usa IA (Llama 3 em Groq) para score de intenção (0–100)</li>
+              <li>✅ Roteia leads: alta → comercial, média → nutrição, baixa → remarketing</li>
+            </ul>
+          </div>
+          <div class="project-section">
+            <h4 class="project-section-title">
+              <i class="fas fa-layer-group"></i> Stack
+            </h4>
+            <div class="tech-stack">
+              <span class="tech-badge">n8n</span>
+              <span class="tech-badge">Groq</span>
+              <span class="tech-badge">Meta API</span>
+              <span class="tech-badge">Airtable</span>
+              <span class="tech-badge">GA4</span>
             </div>
+          </div>
+          <div class="impact-box">
+            <h4 class="project-section-title">
+              <i class="fas fa-chart-line"></i> Impacto
+            </h4>
+            <div class="impact-item">
+              <i class="fas fa-check-circle" style="color: #10B981;"></i>
+              <span><strong>48%</strong> conversão lead → venda</span>
+            </div>
+            <div class="impact-item">
+              <i class="fas fa-check-circle" style="color: #10B981;"></i>
+              <span><strong>94%</strong> opt-in LGPD</span>
+            </div>
+            <div class="impact-item">
+              <i class="fas fa-bolt" style="color: #3B82F6;"></i>
+              <span>Resposta em <strong>minutos</strong> (vs. dias)</span>
+            </div>
+            <div class="impact-item">
+              <i class="fas fa-money-bill-wave" style="color: #F59E0B;"></i>
+              <span><strong>-35%</strong> CPA vs. fluxo manual</span>
+            </div>
+          </div>
+          <a href="lead_automation_diagram.html" class="diagram-link">
+            <i class="fas fa-diagram-project"></i> Ver Diagrama da Automação
+          </a>
         </div>
-    </section>
-
-    <!-- Approach Section -->
-    <section class="approach-section">
-        <div class="container">
-            <h2 class="section-title">🧠 Minha Abordagem</h2>
-            <p class="section-subtitle">Combino LLMs, pipelines de dados e governança de produto para entregar sistemas robustos, seguros e mensuráveis</p>
-            
-            <div class="approach-content">
-                <div class="quote-box">
-                    <i class="fas fa-quote-left" style="margin-right: 0.5rem;"></i>
-                    Acredito que a integração entre inteligência artificial, engenharia de dados e práticas de produto é a chave para criar soluções escaláveis e de alto impacto no mundo do marketing e negócios.
-                </div>
-                
-                <div class="focus-badges">
-                    <span class="badge" style="background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%); color: white;">
-                        <i class="fas fa-robot"></i> Agente Autônomo
-                    </span>
-                    <span class="badge" style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%); color: white;">
-                        <i class="fas fa-bolt"></i> Automação Inteligente
-                    </span>
-                    <span class="badge" style="background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%); color: white;">
-                        <i class="fas fa-chart-line"></i> Data Apps
-                    </span>
-                </div>
-            </div>
+      </div>
+      
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">
+            <i class="fas fa-chart-bar"></i> BudgetMind – SaaS de Otimização
+          </h3>
+          <p class="project-description">Plataforma que usa IA para redistribuir budget entre canais com base em ROAS/CAC</p>
         </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects-section">
-        <div class="container">
-            <h2 class="section-title">🚀 Projetos em Destaque</h2>
-            <p class="section-subtitle">Soluções reais com impacto mensurável em negócios</p>
-            
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3 class="project-title">
-                            <i class="fas fa-robot"></i> Sistema de Qualificação de Leads com IA
-                        </h3>
-                        <p class="project-description">Chatbot WhatsApp que captura, qualifica e distribui leads em tempo real</p>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-section">
-                            <h4 class="project-section-title">
-                                <i class="fas fa-cogs"></i> Funcionalidades
-                            </h4>
-                            <ul style="list-style: none; padding-left: 0;">
-                                <li style="margin-bottom: 0.5rem;">✅ Pede consentimento LGPD automático</li>
-                                <li style="margin-bottom: 0.5rem;">✅ Usa IA (Llama 3 em Groq) para score de intenção (0–100)</li>
-                                <li>✅ Roteia leads: alta → comercial, média → nutrição, baixa → remarketing</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-section">
-                            <h4 class="project-section-title">
-                                <i class="fas fa-layer-group"></i> Stack
-                            </h4>
-                            <div class="tech-stack">
-                                <span class="tech-badge">n8n</span>
-                                <span class="tech-badge">Groq</span>
-                                <span class="tech-badge">Meta API</span>
-                                <span class="tech-badge">Airtable</span>
-                                <span class="tech-badge">GA4</span>
-                            </div>
-                        </div>
-                        
-                        <div class="impact-box">
-                            <h4 class="project-section-title">
-                                <i class="fas fa-chart-line"></i> Impacto
-                            </h4>
-                            <div class="impact-item">
-                                <i class="fas fa-check-circle" style="color: #10B981;"></i>
-                                <span><strong>48%</strong> conversão lead → venda</span>
-                            </div>
-                            <div class="impact-item">
-                                <i class="fas fa-check-circle" style="color: #10B981;"></i>
-                                <span><strong>94%</strong> opt-in LGPD</span>
-                            </div>
-                            <div class="impact-item">
-                                <i class="fas fa-bolt" style="color: #3B82F6;"></i>
-                                <span>Resposta em <strong>minutos</strong> (vs. dias)</span>
-                            </div>
-                            <div class="impact-item">
-                                <i class="fas fa-money-bill-wave" style="color: #F59E0B;"></i>
-                                <span><strong>-35%</strong> CPA vs. fluxo manual</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-header" style="background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);">
-                        <h3 class="project-title">
-                            <i class="fas fa-chart-bar"></i> BudgetMind – SaaS de Otimização
-                        </h3>
-                        <p class="project-description">Plataforma que usa IA para redistribuir budget entre canais com base em ROAS/CAC</p>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-section">
-                            <h4 class="project-section-title">
-                                <i class="fas fa-cogs"></i> Funcionalidades
-                            </h4>
-                            <ul style="list-style: none; padding-left: 0;">
-                                <li style="margin-bottom: 0.5rem;">✅ Conecta Google Ads, Meta, Shopee, GA4</li>
-                                <li style="margin-bottom: 0.5rem;">✅ Normaliza métricas (ROAS, CPA, CAC, LTV)</li>
-                                <li style="margin-bottom: 0.5rem;">✅ Mostra saturação por canal/campanha/region</li>
-                                <li>✅ Usa Gemini para sugerir redistribuição</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-section">
-                            <h4 class="project-section-title">
-                                <i class="fas fa-layer-group"></i> Stack
-                            </h4>
-                            <div class="tech-stack">
-                                <span class="tech-badge">React</span>
-                                <span class="tech-badge">TypeScript</span>
-                                <span class="tech-badge">BigQuery</span>
-                                <span class="tech-badge">Gemini</span>
-                                <span class="tech-badge">Firestore</span>
-                            </div>
-                        </div>
-                        
-                        <div class="impact-box">
-                            <h4 class="project-section-title">
-                                <i class="fas fa-chart-line"></i> Impacto
-                            </h4>
-                            <div class="impact-item">
-                                <i class="fas fa-money-bill-wave" style="color: #F59E0B;"></i>
-                                <span><strong>R$500k+</strong>/mês gerenciado</span>
-                            </div>
-                            <div class="impact-item">
-                                <i class="fas fa-chart-line" style="color: #10B981;"></i>
-                                <span>ROAS médio <strong>3,2x</strong></span>
-                            </div>
-                            <div class="impact-item">
-                                <i class="fas fa-clock" style="color: #3B82F6;"></i>
-                                <span><strong>92%</strong> menos tempo análise</span>
-                            </div>
-                            <div class="impact-item">
-                                <i class="fas fa-percentage" style="color: #8B5CF6;"></i>
-                                <span><strong>+15~30%</strong> ROAS com IA</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-header" style="background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);">
-                        <h3 class="project-title">
-                            <i class="fas fa-comments"></i> Chatbot de Dados com Snowflake Cortex
-                        </h3>
-                        <p class="project-description">Agente conversacional que responde perguntas em linguagem natural sem SQL</p>
-                    </div>
-                    <div class="project-body">
-                        <div class="project-section">
-                            <h4 class="project-section-title">
-                                <i class="fas fa-cogs"></i> Funcionalidades
-                            </h4>
-                            <ul style="list-style: none; padding-left: 0;">
-                                <li style="margin-bottom: 0.5rem;">✅ Usa Semantic View para mapear tabelas</li>
-                                <li style="margin-bottom: 0.5rem;">✅ Recebe perguntas como "qual total de vendas?"</li>
-                                <li>✅ Entrega: SQL + gráfico + tabela + resposta</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="project-section">
-                            <h4 class="project-section-title">
-                                <i class="fas fa-layer-group"></i> Stack
-                            </h4>
-                            <div class="tech-stack">
-                                <span class="tech-badge">Snowflake</span>
-                                <span class="tech-badge">Cortex Analyst</span>
-                            </div>
-                        </div>
-                        
-                        <div class="impact-box">
-                            <h4 class="project-section-title">
-                                <i class="fas fa-chart-line"></i> Impacto
-                            </h4>
-                            <div class="impact-item">
-                                <i class="fas fa-check-circle" style="color: #10B981;"></i>
-                                <span>POC funcional em <strong>minutos</strong></span>
-                            </div>
-                            <div class="impact-item">
-                                <i class="fas fa-users" style="color: #3B82F6;"></i>
-                                <span>Democratiza dados para não técnicos</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="project-body">
+          <div class="project-section">
+            <h4 class="project-section-title">
+              <i class="fas fa-cogs"></i> Funcionalidades
+            </h4>
+            <ul style="list-style: none; padding-left: 0;">
+              <li style="margin-bottom: 0.75rem;">✅ Conecta Google Ads, Meta, Shopee, GA4</li>
+              <li style="margin-bottom: 0.75rem;">✅ Normaliza métricas (ROAS, CPA, CAC, LTV)</li>
+              <li style="margin-bottom: 0.75rem;">✅ Mostra saturação por canal/campanha/region</li>
+              <li>✅ Usa Gemini para sugerir redistribuição</li>
+            </ul>
+          </div>
+          <div class="project-section">
+            <h4 class="project-section-title">
+              <i class="fas fa-layer-group"></i> Stack
+            </h4>
+            <div class="tech-stack">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">TypeScript</span>
+              <span class="tech-badge">BigQuery</span>
+              <span class="tech-badge">Gemini</span>
+              <span class="tech-badge">Firestore</span>
             </div>
+          </div>
+          <div class="impact-box">
+            <h4 class="project-section-title">
+              <i class="fas fa-chart-line"></i> Impacto
+            </h4>
+            <div class="impact-item">
+              <i class="fas fa-money-bill-wave" style="color: #F59E0B;"></i>
+              <span><strong>R$500k+</strong>/mês gerenciado</span>
+            </div>
+            <div class="impact-item">
+              <i class="fas fa-chart-line" style="color: #10B981;"></i>
+              <span>ROAS médio <strong>3,2x</strong></span>
+            </div>
+            <div class="impact-item">
+              <i class="fas fa-clock" style="color: #3B82F6;"></i>
+              <span><strong>92%</strong> menos tempo análise</span>
+            </div>
+            <div class="impact-item">
+              <i class="fas fa-percentage" style="color: #8B5CF6;"></i>
+              <span><strong>+15~30%</strong> ROAS com IA</span>
+            </div>
+          </div>
+          <a href="budgetmind_diagram.html" class="diagram-link">
+            <i class="fas fa-diagram-project"></i> Ver Arquitetura do BudgetMind
+          </a>
         </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="certifications-section">
-        <div class="container">
-            <h2 class="section-title">🏆 Certificações</h2>
-            <p class="section-subtitle">Validação contínua em IA, dados e estratégia</p>
-            
-            <div class="cert-category">
-                <h3 class="cert-category-title">
-                    <i class="fas fa-brain"></i> IA Generativa & LLMs
-                </h3>
-                <div class="cert-badges">
-                    <span class="cert-badge databricks">
-                        <i class="fas fa-certificate"></i> Databricks Generative AI Fundamentals
-                    </span>
-                    <span class="cert-badge datacamp">
-                        <i class="fas fa-certificate"></i> DataCamp AI Engineer
-                    </span>
-                    <span class="cert-badge udemy">
-                        <i class="fas fa-certificate"></i> Escola Conquer IA
-                    </span>
-                </div>
-            </div>
-            
-            <div class="cert-category">
-                <h3 class="cert-category-title">
-                    <i class="fas fa-database"></i> Data Engineering & Warehouse
-                </h3>
-                <div class="cert-badges">
-                    <span class="cert-badge salesforce">
-                        <i class="fas fa-certificate"></i> Salesforce Data Stream
-                    </span>
-                    <span class="cert-badge databricks">
-                        <i class="fas fa-certificate"></i> Databricks Lakehouse Architecture
-                    </span>
-                    <span class="cert-badge ibm">
-                        <i class="fas fa-certificate"></i> FIAP Business Intelligence
-                    </span>
-                    <span class="cert-badge ibm">
-                        <i class="fas fa-certificate"></i> FIAP Big Data
-                    </span>
-                    <span class="cert-badge datacamp">
-                        <i class="fas fa-certificate"></i> DataCamp SQL
-                    </span>
-                </div>
-            </div>
-            
-            <div class="cert-category">
-                <h3 class="cert-category-title">
-                    <i class="fas fa-bullhorn"></i> Mídia Paga com IA
-                </h3>
-                <div class="cert-badges">
-                    <span class="cert-badge google">
-                        <i class="fas fa-certificate"></i> Google High Performance Ads
-                    </span>
-                    <span class="cert-badge google">
-                        <i class="fas fa-certificate"></i> Google Shopping Ads
-                    </span>
-                    <span class="cert-badge amazon">
-                        <i class="fas fa-certificate"></i> Amazon DSP
-                    </span>
-                </div>
-            </div>
-            
-            <div class="cert-category">
-                <h3 class="cert-category-title">
-                    <i class="fas fa-chart-line"></i> Estratégia & Liderança
-                </h3>
-                <div class="cert-badges">
-                    <span class="cert-badge coursera">
-                        <i class="fas fa-certificate"></i> UIUC Estratégia de Negócios (97.14%)
-                    </span>
-                    <span class="cert-badge udemy">
-                        <i class="fas fa-certificate"></i> Fast MBA Liderança
-                    </span>
-                    <span class="cert-badge atlassian">
-                        <i class="fas fa-certificate"></i> Senac Scrum & Kanban
-                    </span>
-                </div>
-            </div>
+      </div>
+      
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-header">
+          <h3 class="project-title">
+            <i class="fas fa-comments"></i> Chatbot de Dados com Snowflake Cortex
+          </h3>
+          <p class="project-description">Agente conversacional que responde perguntas em linguagem natural sem SQL</p>
         </div>
-    </section>
-
-    <!-- Stack Section -->
-    <section class="stack-section">
-        <div class="container">
-            <h2 class="section-title">💻 Stack Técnico</h2>
-            <p class="section-subtitle">Tecnologias que domino e utilizo diariamente</p>
-            
-            <div class="stack-category">
-                <h3 class="stack-category-title">Linguagens & Frameworks</h3>
-                <div class="stack-badges">
-                    <span class="stack-badge python">
-                        <i class="fab fa-python"></i> Python
-                    </span>
-                    <span class="stack-badge typescript">
-                        <i class="fab fa-js"></i> TypeScript
-                    </span>
-                    <span class="stack-badge javascript">
-                        <i class="fab fa-js"></i> JavaScript
-                    </span>
-                    <span class="stack-badge sql">
-                        <i class="fas fa-database"></i> SQL
-                    </span>
-                    <span class="stack-badge react">
-                        <i class="fab fa-react"></i> React
-                    </span>
-                </div>
+        <div class="project-body">
+          <div class="project-section">
+            <h4 class="project-section-title">
+              <i class="fas fa-cogs"></i> Funcionalidades
+            </h4>
+            <ul style="list-style: none; padding-left: 0;">
+              <li style="margin-bottom: 0.75rem;">✅ Usa Semantic View para mapear tabelas</li>
+              <li style="margin-bottom: 0.75rem;">✅ Recebe perguntas como "qual total de vendas?"</li>
+              <li>✅ Entrega: SQL + gráfico + tabela + resposta</li>
+            </ul>
+          </div>
+          <div class="project-section">
+            <h4 class="project-section-title">
+              <i class="fas fa-layer-group"></i> Stack
+            </h4>
+            <div class="tech-stack">
+              <span class="tech-badge">Snowflake</span>
+              <span class="tech-badge">Cortex Analyst</span>
             </div>
-            
-            <div class="stack-category">
-                <h3 class="stack-category-title">IA & Orquestração</h3>
-                <div class="stack-badges">
-                    <span class="stack-badge groq">
-                        <i class="fas fa-brain"></i> Groq
-                    </span>
-                    <span class="stack-badge gemini">
-                        <i class="fas fa-brain"></i> Gemini
-                    </span>
-                    <span class="stack-badge snowflake">
-                        <i class="fas fa-snowflake"></i> Snowflake Cortex
-                    </span>
-                    <span class="stack-badge n8n">
-                        <i class="fas fa-robot"></i> n8n
-                    </span>
-                    <span class="stack-badge n8n">
-                        <i class="fas fa-robot"></i> Make
-                    </span>
-                </div>
+          </div>
+          <div class="impact-box">
+            <h4 class="project-section-title">
+              <i class="fas fa-chart-line"></i> Impacto
+            </h4>
+            <div class="impact-item">
+              <i class="fas fa-check-circle" style="color: #10B981;"></i>
+              <span>POC funcional em <strong>minutos</strong></span>
             </div>
-            
-            <div class="stack-category">
-                <h3 class="stack-category-title">Dados & Analytics</h3>
-                <div class="stack-badges">
-                    <span class="stack-badge bigquery">
-                        <i class="fas fa-database"></i> BigQuery
-                    </span>
-                    <span class="stack-badge snowflake">
-                        <i class="fas fa-snowflake"></i> Snowflake
-                    </span>
-                    <span class="stack-badge ga4">
-                        <i class="fab fa-google"></i> GA4
-                    </span>
-                    <span class="stack-badge" style="color: #4285F4; border-color: #4285F4;">
-                        <i class="fab fa-google"></i> Looker Studio
-                    </span>
-                </div>
+            <div class="impact-item">
+              <i class="fas fa-users" style="color: #3B82F6;"></i>
+              <span>Democratiza dados para não técnicos</span>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Education Section -->
-    <section class="education-section">
-        <div class="container">
-            <h2 class="section-title">📚 Formação Acadêmica</h2>
-            <p class="section-subtitle">Base sólida em tecnologia e negócios</p>
-            
-            <div class="education-grid">
-                <div class="education-card">
-                    <h3 class="education-institution">Faculdade UniBF</h3>
-                    <p class="education-degree">MBA em Data Warehouse e Business Intelligence</p>
-                    <p class="education-period">Jan 2025 – Ago 2026</p>
-                </div>
-                
-                <div class="education-card">
-                    <h3 class="education-institution">DataCamp</h3>
-                    <p class="education-degree">Postgraduate: Data Engineer de IA (Python)</p>
-                    <p class="education-period">Ago 2025 – Dez 2026</p>
-                </div>
-                
-                <div class="education-card">
-                    <h3 class="education-institution">Universidade Paulista</h3>
-                    <p class="education-degree">Análise e Desenvolvimento de Sistemas</p>
-                    <p class="education-period">2013 – 2015</p>
-                </div>
+<!-- Certifications Section -->
+<section class="certifications-section">
+  <div class="container">
+    <h2 class="section-title">🏆 Certificações</h2>
+    <p class="section-subtitle">Validação contínua em IA, dados e estratégia com especialização em plataformas líderes de mercado</p>
+    
+    <div class="cert-category">
+      <h3 class="cert-category-title">
+        <i class="fas fa-brain"></i> IA Generativa & LLMs
+      </h3>
+      <div class="cert-badges">
+        <span class="cert-badge databricks">
+          <i class="fas fa-certificate"></i> Databricks Generative AI Fundamentals
+        </span>
+        <span class="cert-badge datacamp">
+          <i class="fas fa-certificate"></i> DataCamp AI Engineer
+        </span>
+        <span class="cert-badge udemy">
+          <i class="fas fa-certificate"></i> Escola Conquer IA Generativa
+        </span>
+        <span class="cert-badge google">
+          <i class="fas fa-certificate"></i> Google Generative AI Fundamentals
+        </span>
+      </div>
+    </div>
+    
+    <div class="cert-category">
+      <h3 class="cert-category-title">
+        <i class="fas fa-database"></i> Data Engineering & Analytics
+      </h3>
+      <div class="cert-badges">
+        <span class="cert-badge salesforce">
+          <i class="fas fa-certificate"></i> Salesforce Data Stream
+        </span>
+        <span class="cert-badge databricks">
+          <i class="fas fa-certificate"></i> Databricks Lakehouse Architecture
+        </span>
+        <span class="cert-badge ibm">
+          <i class="fas fa-certificate"></i> FIAP Business Intelligence
+        </span>
+        <span class="cert-badge ibm">
+          <i class="fas fa-certificate"></i> FIAP Big Data & Analytics
+        </span>
+        <span class="cert-badge datacamp">
+          <i class="fas fa-certificate"></i> DataCamp SQL Fundamentals
+        </span>
+        <span class="cert-badge microsoft">
+          <i class="fas fa-certificate"></i> Microsoft Power BI Data Analyst
+        </span>
+      </div>
+    </div>
+    
+    <div class="cert-category">
+      <h3 class="cert-category-title">
+        <i class="fas fa-bullhorn"></i> Mídia Paga com IA
+      </h3>
+      <div class="cert-badges">
+        <span class="cert-badge google">
+          <i class="fas fa-certificate"></i> Google High Performance Ads
+        </span>
+        <span class="cert-badge google">
+          <i class="fas fa-certificate"></i> Google Shopping Ads
+        </span>
+        <span class="cert-badge amazon">
+          <i class="fas fa-certificate"></i> Amazon DSP & Sponsored Ads
+        </span>
+        <span class="cert-badge meta">
+          <i class="fas fa-certificate"></i> Meta Blueprint: Media Buying
+        </span>
+      </div>
+    </div>
+    
+    <div class="cert-category">
+      <h3 class="cert-category-title">
+        <i class="fas fa-chart-line"></i> Estratégia & Liderança
+      </h3>
+      <div class="cert-badges">
+        <span class="cert-badge coursera">
+          <i class="fas fa-certificate"></i> UIUC Estratégia de Negócios (97.14%)
+        </span>
+        <span class="cert-badge udemy">
+          <i class="fas fa-certificate"></i> Fast MBA Liderança & Gestão
+        </span>
+        <span class="cert-badge atlassian">
+          <i class="fas fa-certificate"></i> Senac Scrum & Kanban
+        </span>
+        <span class="cert-badge coursera">
+          <i class="fas fa-certificate"></i> Google Project Management
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stack Section -->
+<section class="stack-section">
+  <div class="container">
+    <h2 class="section-title">💻 Stack Técnico</h2>
+    <p class="section-subtitle">Tecnologias que domino e utilizo diariamente para entregar soluções robustas e escaláveis</p>
+    
+    <div class="stack-category">
+      <h3 class="stack-category-title">Linguagens & Frameworks</h3>
+      <div class="stack-badges">
+        <span class="stack-badge python">
+          <i class="fab fa-python"></i> Python
+        </span>
+        <span class="stack-badge typescript">
+          <i class="fab fa-js"></i> TypeScript
+        </span>
+        <span class="stack-badge javascript">
+          <i class="fab fa-js"></i> JavaScript
+        </span>
+        <span class="stack-badge sql">
+          <i class="fas fa-database"></i> SQL
+        </span>
+        <span class="stack-badge react">
+          <i class="fab fa-react"></i> React
+        </span>
+      </div>
+    </div>
+    
+    <div class="stack-category">
+      <h3 class="stack-category-title">IA & Orquestração</h3>
+      <div class="stack-badges">
+        <span class="stack-badge groq">
+          <i class="fas fa-brain"></i> Groq
+        </span>
+        <span class="stack-badge gemini">
+          <i class="fas fa-brain"></i> Gemini
+        </span>
+        <span class="stack-badge snowflake">
+          <i class="fas fa-snowflake"></i> Snowflake Cortex
+        </span>
+        <span class="stack-badge n8n">
+          <i class="fas fa-robot"></i> n8n
+        </span>
+        <span class="stack-badge n8n">
+          <i class="fas fa-robot"></i> Make
+        </span>
+      </div>
+    </div>
+    
+    <div class="stack-category">
+      <h3 class="stack-category-title">Dados & Analytics</h3>
+      <div class="stack-badges">
+        <span class="stack-badge bigquery">
+          <i class="fas fa-database"></i> BigQuery
+        </span>
+        <span class="stack-badge snowflake">
+          <i class="fas fa-snowflake"></i> Snowflake
+        </span>
+        <span class="stack-badge ga4">
+          <i class="fab fa-google"></i> GA4
+        </span>
+        <span class="stack-badge looker">
+          <i class="fas fa-chart-bar"></i> Looker Studio
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education Section -->
+<section class="education-section">
+  <div class="container">
+    <h2 class="section-title">📚 Formação Acadêmica</h2>
+    <p class="section-subtitle">Base sólida em tecnologia e negócios com foco contínuo em atualização profissional</p>
+    <div class="education-grid">
+      <div class="education-card">
+        <h3 class="education-institution">
+          <i class="fas fa-graduation-cap"></i> Faculdade UniBF
+        </h3>
+        <p class="education-degree">MBA em Data Warehouse e Business Intelligence</p>
+        <p class="education-period">Jan 2025 – Ago 2026 (Em andamento)</p>
+      </div>
+      <div class="education-card">
+        <h3 class="education-institution">
+          <i class="fas fa-laptop-code"></i> DataCamp
+        </h3>
+        <p class="education-degree">Postgraduate: Data Engineer de IA (Python)</p>
+        <p class="education-period">Ago 2025 – Dez 2026 (Em andamento)</p>
+      </div>
+      <div class="education-card">
+        <h3 class="education-institution">
+          <i class="fas fa-university"></i> Universidade Paulista
+        </h3>
+        <p class="education-degree">Análise e Desenvolvimento de Sistemas</p>
+        <p class="education-period">2013 – 2015</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="container">
+    <h2 class="section-title">📬 Vamos Conversar?</h2>
+    <p class="section-subtitle">Disponível para consultorias, projetos estratégicos e parcerias inovadoras</p>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3><i class="fas fa-lightbulb"></i> Sobre Mim</h3>
+        <p class="contact-text">
+          Se quiser trocar ideia sobre <strong>IA, dados e automação no marketing</strong>, adoro conversar sobre como transformar processos manuais em sistemas inteligentes, automatizados e sustentáveis. 🚀
+        </p>
+        <div class="contact-links-grid">
+          <div class="contact-link-item">
+            <div class="contact-icon">
+              <i class="fab fa-linkedin"></i>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="container">
-            <h2 class="section-title">📬 Vamos Conversar?</h2>
-            <p class="section-subtitle">Disponível para consultorias e parcerias estratégicas</p>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3><i class="fas fa-lightbulb"></i> Sobre Mim</h3>
-                    <p class="contact-text">
-                        Se quiser trocar ideia sobre <strong>IA, dados e automação no marketing</strong>, adoro conversar sobre como transformar processos manuais em sistemas inteligentes, automatizados e sustentáveis. 🚀
-                    </p>
-                    
-                    <div class="contact-links-grid">
-                        <div class="contact-link-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div>
-                                <div class="contact-link-title">LinkedIn</div>
-                                <a href="https://linkedin.com/in/marinanagashina" target="_blank" class="contact-link-url">
-                                    linkedin.com/in/marinanagashina
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-link-item">
-                            <div class="contact-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div>
-                                <div class="contact-link-title">GitHub</div>
-                                <a href="https://github.com/maryvnagashima" target="_blank" class="contact-link-url">
-                                    github.com/maryvnagashima
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-link-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <div class="contact-link-title">Email</div>
-                                <a href="mailto:contato@marinanagashima.com" class="contact-link-url">
-                                    contato@marinanagashima.com
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="schedule-box">
-                        <h4><i class="fas fa-calendar-check"></i> Agendamento de Conversa</h4>
-                        <p>Disponível para consultorias e parcerias estratégicas. Entre em contato pelo LinkedIn para agendar uma conversa.</p>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3><i class="fas fa-paper-plane"></i> Mande uma Mensagem</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" placeholder="Seu nome" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="seu@email.com" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" placeholder="Sua mensagem sobre IA, dados ou automação..." required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">
-                            <i class="fas fa-paper-plane"></i> Enviar Mensagem
-                        </button>
-                    </form>
-                </div>
+            <div>
+              <div class="contact-link-title">LinkedIn</div>
+              <a href="https://linkedin.com/in/marinanagashima" target="_blank" class="contact-link-url">
+                linkedin.com/in/marinanagashima
+              </a>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-social">
-                <a href="https://linkedin.com/in/marinanagashima" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/maryvnagashima" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:contato@marinanagashima.com">
-                    <i class="fas fa-envelope"></i>
-                </a>
+          </div>
+          <div class="contact-link-item">
+            <div class="contact-icon">
+              <i class="fab fa-github"></i>
             </div>
-            
-            <p class="footer-text">
-                &copy; <span id="year"></span> Marina Nagashima. Todos os direitos reservados.
-            </p>
-            <p class="footer-subtext">
-                Criando agentes, automações e data apps com IA e dados
-            </p>
+            <div>
+              <div class="contact-link-title">GitHub</div>
+              <a href="https://github.com/maryvnagashima" target="_blank" class="contact-link-url">
+                github.com/maryvnagashima
+              </a>
+            </div>
+          </div>
+          <div class="contact-link-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <div class="contact-link-title">Email</div>
+              <a href="mailto:contato@marinanagashima.com" class="contact-link-url">
+                contato@marinanagashima.com
+              </a>
+            </div>
+          </div>
         </div>
-    </footer>
+        <div class="schedule-box">
+          <h4><i class="fas fa-calendar-check"></i> Agendamento de Conversa</h4>
+          <p>Disponível para consultorias e parcerias estratégicas. Entre em contato pelo LinkedIn para agendar uma conversa inicial sem compromisso.</p>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3><i class="fas fa-paper-plane"></i> Mande uma Mensagem</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" id="name" placeholder="Seu nome completo" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="seu@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensagem</label>
+            <textarea id="message" placeholder="Sua mensagem sobre IA, dados ou automação..." required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Enviar Mensagem
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        // Update year dynamically
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Form submission
-        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Mensagem enviada com sucesso! Entrarei em contato em breve.');
-            this.reset();
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-social">
+      <a href="https://linkedin.com/in/marinanagashima" target="_blank">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/maryvnagashima" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:contato@marinanagashima.com">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <p class="footer-text">
+      &copy; <span id="year"></span> Marina Nagashima. Todos os direitos reservados.
+    </p>
+    <p class="footer-subtext">
+      Criando agentes, automações e data apps com IA e dados para transformar negócios
+    </p>
+  </div>
+</footer>
+
+<script>
+// Update year dynamically
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Form submission with validation and feedback
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Get form values
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+  
+  // Simple validation
+  if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+    alert('Por favor, preencha todos os campos do formulário.');
+    return;
+  }
+  
+  if (!email.includes('@') || !email.includes('.')) {
+    alert('Por favor, insira um email válido.');
+    return;
+  }
+  
+  // Show success message with animation
+  const submitBtn = this.querySelector('.submit-btn');
+  const originalText = submitBtn.innerHTML;
+  
+  submitBtn.innerHTML = '<i class="fas fa-check-circle"></i> Mensagem enviada!';
+  submitBtn.style.background = 'linear-gradient(135deg, #10B981 0%, #0EA5E9 100%)';
+  
+  // Reset form after delay
+  setTimeout(() => {
+    this.reset();
+    submitBtn.innerHTML = originalText;
+    submitBtn.style.background = '';
+    
+    // Show confirmation message
+    const confirmation = document.createElement('div');
+    confirmation.style.position = 'fixed';
+    confirmation.style.top = '20px';
+    confirmation.style.right = '20px';
+    confirmation.style.background = 'linear-gradient(135deg, #10B981 0%, #0EA5E9 100%)';
+    confirmation.style.color = 'white';
+    confirmation.style.padding = '15px 25px';
+    confirmation.style.borderRadius = '12px';
+    confirmation.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
+    confirmation.style.zIndex = '10000';
+    confirmation.style.transform = 'translateX(400px)';
+    confirmation.style.transition = 'transform 0.5s ease-out';
+    confirmation.innerHTML = '<i class="fas fa-check-circle"></i> Mensagem enviada com sucesso! Entrarei em contato em breve.';
+    document.body.appendChild(confirmation);
+    
+    // Animate in
+    setTimeout(() => {
+      confirmation.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+      confirmation.style.transform = 'translateX(400px)';
+      setTimeout(() => {
+        document.body.removeChild(confirmation);
+      }, 500);
+    }, 5000);
+  }, 1500);
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    if (targetId === '#') return;
+    
+    const target = document.querySelector(targetId);
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// Animation on scroll for elements
+const animateOnScroll = () => {
+  const elements = document.querySelectorAll('.stat-card, .project-card, .cert-badge, .stack-badge, .education-card');
+  
+  elements.forEach(element => {
+    const elementPosition = element.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.3;
+    
+    if (elementPosition < screenPosition) {
+      element.style.opacity = 1;
+      element.style.transform = 'translateY(0)';
+    }
+  });
+};
+
+// Set initial state for animated elements
+document.querySelectorAll('.stat-card, .project-card, .cert-badge, .stack-badge, .education-card').forEach(element => {
+  element.style.opacity = 0;
+  element.style.transform = 'translateY(20px)';
+  element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+});
+
+// Initialize animations on load and scroll
+window.addEventListener('load', animateOnScroll);
+window.addEventListener('scroll', animateOnScroll);
+
+// Initialize immediately for elements already in view
+setTimeout(animateOnScroll, 300);
+</script>
 </body>
 </html>
+
