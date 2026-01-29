@@ -1,6 +1,4 @@
-<div align="center">
-<img src="https://avatars.githubusercontent.com/u/84460036?v=4" width="150" style="border-radius:50%; object-fit: cover; border: 4px solid white; box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);" />
-  
+
   <h1>Marina Vieira Nagashima</h1>
   
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=AI%2FML+Engineer+%7C+Marketing+%E2%86%92+Tech;Building+AI+Agents+%26+Data+Pipelines;2+Years+Shipping+LLMs+to+Production" alt="Typing SVG" />
