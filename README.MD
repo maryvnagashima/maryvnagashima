@@ -1,5 +1,5 @@
 <div align="center">
- <img src="https://avatars.githubusercontent.com/u/84460036?v=4" width="120" style="border-radius:50%; object-fit: cover; border: 3px solid #6366F1; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);" />
+<img src="https://avatars.githubusercontent.com/u/84460036?v=4" width="150" style="border-radius:50%; object-fit: cover; border: 4px solid white; box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);" />
   
   <h1>Marina Vieira Nagashima</h1>
   
