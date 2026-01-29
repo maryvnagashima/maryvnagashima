@@ -1,7 +1,8 @@
 <div align="center">
-  <img src="https://github.com/maryvnagashima.png" width="150" style="border-radius:50%"/>
+<img src="https://github.com/maryvnagashima.png" width="120" style="border-radius:50%; border: 3px solid #6366F1; box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);" />
+</div>
   
-  <h1>Marina Nagashima</h1>
+  <h1>Marina Vieira Nagashima</h1>
   
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=AI%2FML+Engineer+%7C+Marketing+%E2%86%92+Tech;Building+AI+Agents+%26+Data+Pipelines;2+Years+Shipping+LLMs+to+Production" alt="Typing SVG" />
   
@@ -53,6 +54,19 @@ Trabalho criando **agentes, automações e data apps** que usam IA e dados para 
 **Cloud:** GCP (2 anos), AWS (1 ano), Azure Databricks (1 ano)  
 **Dev:** Python, TypeScript, React, n8n, Git/GitHub  
 **Foco:** MLOps, Agent Orchestration, Data Apps, LGPD Compliance
+
+### ✨ Fora do Trabalho
+Sou eternamente curiosa! 💫
+Adoro estudar, testar novas receitas (e salvar centenas delas!), me aventurar na cozinha e compartilhar o que aprendo.
+<div align="center">
+<img src="https://img.shields.io/badge/Chef_Amadora-👩‍🍳%20Receitas%20Salvas%20✓-FF6B6B?style=flat-square&logo=chefhat&logoColor=white" />
+<img src="https://img.shields.io/badge/Nadadora-🏊‍♀️%20Mente%20Clara-4ECDC4?style=flat-square&logo=swimmer&logoColor=white" />
+<img src="https://img.shields.io/badge/Cat_Mom-🐾%20x3%20Felinos%20no%20Comando-FE7A16?style=flat-square&logo=cats&logoColor=white" />
+<img src="https://img.shields.io/badge/Casada-💍%20Parceira%20de%20Aventuras-E91E63?style=flat-square&logo=heart&logoColor=white" />
+</div>
+
+Acredito que curiosidade, cuidado e criatividade são ingredientes essenciais — tanto na engenharia de IA quanto na vida.
+(E sim, meus gatos aprovam este README.) 😼
 
 ### 🚀 Projetos Atuais
 
