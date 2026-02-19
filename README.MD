@@ -12,6 +12,7 @@
     <img src="https://img.shields.io/badge/Cloud-GCP%20%7C%20AWS%20%7C%20Azure-0EA5E9?style=flat-square&logo=googlecloud&logoColor=white" alt="Cloud"/>
     <img src="https://img.shields.io/badge/Data-BigQuery%20%7C%20Snowflake%20%7C%20Databricks-FF6B35?style=flat-square&logo=databricks&logoColor=white" alt="Data"/>
     <img src="https://img.shields.io/badge/Stack-Python%20%7C%20TypeScript%20%7C%20React-0D9488?style=flat-square&logo=python&logoColor=white" alt="Stack"/>
+[![AWS Certified](https://img.shields.io/badge/AWS_Certified-Cloud_Practitioner-FF9900?logo=amazon-aws)](https://aws.amazon.com/verification)
   </div>
   
   <br/>
