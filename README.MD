@@ -1,5 +1,6 @@
 ```markdown
-# 💜 Marina Vieira Nagashima
+<div align="center">
+  <h1>Marina Vieira Nagashima</h1>
 
 ```text
 AI/ML Engineer | Marketing → Tech | Building AI Agents & Data Pipelines
