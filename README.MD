@@ -6,20 +6,6 @@
 
 > Transformando processos manuais em sistemas inteligentes com **IA Generativa**, **automação** e **engenharia de dados** — com foco em resultados mensuráveis e conformidade LGPD.
 
----
-
-## 🔗 Conecte-se
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/marinanagashima)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:marina_vborges@hotmail.com)
-[![Agendar Reunião](https://img.shields.io/badge/Agendar_Reunião-4285F4?style=for-the-badge&logo=googlecalendar&logoColor=white)](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0VVe_zVPlqTkd9FqHPKjLr5YRqMhqH65JqTmMqOX4XkYj8Mf6uPjhJ9WjNQfnKHW0T9KY8kLxz)
-
-</div>
-
----
-
 ## 👋 Sobre Mim
 
 **AI Tools · GenAI · Data & Automation · Marketing Tech**
@@ -260,7 +246,19 @@ Sou eternamente curiosa! 💫 Adoro estudar, testar novas receitas, me aventurar
   <br/>
   <img src="https://github-readme-stats.vercel.app/api?username=maryvnagashima&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="49%"/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=maryvnagashima&theme=tokyonight&hide_border=true" width="49%"/>
+
+## 🔗 Conecte-se
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/marinanagashima)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:marina_vborges@hotmail.com)
+[![Agendar Reunião](https://img.shields.io/badge/Agendar_Reunião-4285F4?style=for-the-badge&logo=googlecalendar&logoColor=white)](https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0VVe_zVPlqTkd9FqHPKjLr5YRqMhqH65JqTmMqOX4XkYj8Mf6uPjhJ9WjNQfnKHW0T9KY8kLxz)
+
+</div>
+
+---
   <br/><br/>
-  <sub>💜 Feito com IA Generativa • Atualizado: Março 2026</sub>
+  <sub>💜 • Atualizado: Março 2026</sub>
 </div>
 ```
