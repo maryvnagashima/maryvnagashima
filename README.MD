@@ -208,7 +208,9 @@ Sou eternamente curiosa! 💫 Adoro estudar, testar novas receitas, me aventurar
   <img src="https://img.shields.io/badge/Casada-💍_Parceira_de_Aventuras-E91E63?style=flat-square&logo=heart&logoColor=white" />
 </div>
 
-> Acredito que curiosidade, cuidado e criatividade são ingredientes essenciais — tanto na engenharia de IA quanto na vida. 😼
+> Acredito que curiosidade, cuidado e criatividade são ingredientes essenciais — tanto na engenharia de IA quanto na vida.
+(E sim, meus gatos aprovam este README.) 😼
+
 
 ---
 
