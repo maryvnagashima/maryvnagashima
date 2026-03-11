@@ -1,10 +1,6 @@
-```markdown
+
 <div align="center">
   <h1>Marina Vieira Nagashima</h1>
-
-```text
-AI/ML Engineer | Marketing → Tech | Building AI Agents & Data Pipelines
-```
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=3000&pause=500&color=6366F1&center=true&vCenter=true&width=550&lines=AI%2FML+Engineer+%7C+10y+Marketing+%E2%86%92+Tech;Building+AI+Agents+%26+Data+Pipelines;2+Years+Shipping+LLMs+to+Production;YAGNI+%2B+Compliance+by+Design" alt="Typing SVG" />
 
