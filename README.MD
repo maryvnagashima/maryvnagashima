@@ -1,4 +1,4 @@
-
+<div align="center">
   <h1>Marina Vieira Nagashima</h1>
   
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=6366F1&center=true&vCenter=true&width=600&lines=AI%2FML+Engineer+%7C+Marketing+%E2%86%92+Tech;Building+AI+Agents+%26+Data+Pipelines;2+Years+Shipping+LLMs+to+Production" alt="Typing SVG" />
@@ -55,21 +55,16 @@ Trabalho criando **agentes, automações e data apps** que usam IA e dados para 
 ### ✨ Fora do Trabalho
 Sou eternamente curiosa! 💫
 Adoro estudar, testar novas receitas (e salvar centenas delas!), me aventurar na cozinha e compartilhar o que aprendo.
+
 <div align="center">
-<img src="https://img.shields.io/badge/Chef_Amadora-👩‍🍳%20Receitas%20Salvas%20✓-FF6B6B?style=flat-square&logo=chefhat&logoColor=white" />
-<img src="https://img.shields.io/badge/Nadadora-🏊‍♀️%20Mente%20Clara-4ECDC4?style=flat-square&logo=swimmer&logoColor=white" />
-<img src="https://img.shields.io/badge/Cat_Mom-🐾%20x3%20Felinos%20no%20Comando-FE7A16?style=flat-square&logo=cats&logoColor=white" />
-<img src="https://img.shields.io/badge/Casada-💍%20Parceira%20de%20Aventuras-E91E63?style=flat-square&logo=heart&logoColor=white" />
+  <img src="https://img.shields.io/badge/Chef_Amadora-👩‍🍳%20Receitas%20Salvas%20✓-FF6B6B?style=flat-square&logo=chefhat&logoColor=white" />
+  <img src="https://img.shields.io/badge/Nadadora-🏊‍♀️%20Mente%20Clara-4ECDC4?style=flat-square&logo=swimmer&logoColor=white" />
+  <img src="https://img.shields.io/badge/Cat_Mom-🐾%20x3%20Felinos%20no%20Comando-FE7A16?style=flat-square&logo=cats&logoColor=white" />
+  <img src="https://img.shields.io/badge/Casada-💍%20Parceira%20de%20Aventuras-E91E63?style=flat-square&logo=heart&logoColor=white" />
 </div>
 
 Acredito que curiosidade, cuidado e criatividade são ingredientes essenciais — tanto na engenharia de IA quanto na vida.
 (E sim, meus gatos aprovam este README.) 😼
-
-### 🚀 Projetos Atuais
-
-- 🤖 Lead Qualification AI (48% conversion, 50k+ interactions/month)
-- 📊 BudgetMind SaaS (R$500k+ managed, 3.2x ROAS)
-- 💬 Snowflake Cortex Chatbot (SQL-free natural language queries)
 
 ---
 
@@ -88,9 +83,6 @@ Acredito que curiosidade, cuidado e criatividade são ingredientes essenciais �
 - ✅ Groq/Llama 3 para classificação em tempo real
 - ✅ Retry logic com exponential backoff
 - ✅ Conformidade total LGPD (consentimento explícito)
-
-**Arquitetura:**
-
 
 ---
 
@@ -234,5 +226,6 @@ Acredito que curiosidade, cuidado e criatividade são ingredientes essenciais �
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=maryvnagashima&color=6366f1&style=flat-square" alt="Profile views"/>
   <br/><br/>
-  <sub>💜 Feito com IA Generativa • Atualizado Janeiro 2026</sub>
+  <sub>💜 Atualizado Janeiro 2026</sub>
 </div>
+```
